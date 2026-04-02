@@ -15,7 +15,9 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
@@ -49,9 +51,11 @@ public class PlayClockActivity extends AppCompatActivity {
         // Layout setzen
         setContentView(R.layout.activity_playclock);
 
+        // Keep screen on while app is open
+        findViewById(R.id.playclockActivity).setKeepScreenOn(true);
+
         // TextViews aus dem Layout binden
         playclock = findViewById(R.id.playclock_indicator);
-//        periodIndicator = findViewById(R.id.playclock_period_indicator);
         timeOfDay = findViewById(R.id.playclock_time_of_day);
 
         dayoftimeHandler = new Handler(Looper.getMainLooper());
@@ -115,6 +119,13 @@ public class PlayClockActivity extends AppCompatActivity {
             gestureDetector.onTouchEvent(event);
             return true;
         });
+
+        getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                Toast.makeText(getApplicationContext(), "Zurück ist deaktiviert!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -165,7 +176,6 @@ public class PlayClockActivity extends AppCompatActivity {
                     else if (currentPlayClock == 0) {
                         rumble(new long[]{0, 400, 200, 400, 200, 400}, new int[]{0,255, 0, 255, 0, 255});
                         stopPlayclock();
-                        currentPlayClock = 40 * 10;
                         return;
                     }
                     playclockHandler.postAtTime(this, nextRunStep);
