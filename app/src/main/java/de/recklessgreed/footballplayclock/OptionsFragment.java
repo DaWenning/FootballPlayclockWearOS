@@ -24,7 +24,13 @@ public class OptionsFragment extends DialogFragment {
         }
 
         final PlayClockActivity finalParent = parent;
-        // Wire the Back TextView to dismiss the dialog
+        View back = root.findViewById(R.id.backSelector);
+        if (back instanceof TextView) {
+            back.setOnClickListener(v -> dismiss());
+        }
+
+
+        // Wire the Back TextView to exit the activity, which will also close the dialog
         View exit = root.findViewById(R.id.exitSelector);
         if (exit != null) exit.setOnClickListener(v -> {
             // exit the entire activity, which will also close the dialog

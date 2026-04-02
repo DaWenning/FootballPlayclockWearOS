@@ -32,3 +32,4 @@ Bei 0 Sekunden bleibt die Uhr stehen und ein langes Muster (400ms - 200ms - 400m
 ## Sonstiges
 
 Damit die App auch beendet werden kann, ist beim langen halten des Bildschirms ein Menü integriert. 
+![menu-image](playclock_menu.png)

@@ -29,14 +29,25 @@
             android:layout_marginEnd="20dp">
 
             <TextView
+                android:id="@+id/backSelector"
+                android:text="Zurück"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/options_selector_item_background"
+                android:padding="16dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="90dp"
+                />
+
+            <TextView
                 android:id="@+id/exitSelector"
                 android:text="Beenden"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/exit_selector_item_background"
                 android:padding="16dp"
-                android:textColor="@android:color/white"
-                android:layout_marginTop="90dp"/>
+                android:textColor="@android:color/white"/>
 
         </LinearLayout>
 
