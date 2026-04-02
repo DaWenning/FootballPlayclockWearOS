@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- You may have other colors defined as well -->
+    <color name="text">#262626</color>
+    <color name="primary">#E54b4b</color>
+    <color name="secondary">#cbd4c2</color>
+    <color name="background">#476c9b</color>
+    <color name="darkred">#8B0000</color>
+</resources>
