@@ -20,9 +20,13 @@ Bei einem Wischen nach oben oder nach unten startet die Uhr einen 25 Sekunden Ti
 Beides wird durch eine Vibration der Uhr quittiert. 
 
 Erreicht der Timer 25 Sekunden (beim setzen auf 40) vibriert die Uhr kurz (200 ms) um den Schiedsrichter zur Kommunikation mit dem Referee hinzuweisen.
+
 Bei 15 Sekunden vibriert die Uhr etwas länger (400ms) um das fortschreiten mitzuteilen.
+
 Bei 10 Sekunden vibriert die Uhr im ersten Muster (400ms - 200 ms - 400 ms) um darauf hinzuweisen ggf. den Arm zu heben.
+
 Bei 5 Sekunden beginnt die Uhr bis 0 Sekunden ein schnelles Muster von sich zu geben (200 ms - 200 ms - 200 ms). 
+
 Bei 0 Sekunden bleibt die Uhr stehen und ein langes Muster (400ms - 200ms - 400ms - 200ms - 400ms) vibriert.
 
 ## Sonstiges
