@@ -152,26 +152,27 @@ public class PlayClockActivity extends AppCompatActivity {
                     if (fourty && currentPlayClock == 25 * 10 ) {
                         rumble(new long[]{0, 200}, new int[]{0,255});
                     }
-                    else if (currentPlayClock == 15 * 10) {
-                        rumble(new long[]{0, 400}, new int[]{0,255});
-                    }
+                    // Remove 15s rumble to avoid confusion with 25s clock, as 40s clock also has a rumble at 25s
+//                    else if (currentPlayClock == 15 * 10) {
+//                        rumble(new long[]{0, 400}, new int[]{0,255});
+//                    }
                     else if (currentPlayClock == 10 * 10) {
                         rumble(new long[]{0, 400, 200, 400}, new int[]{0,255, 0, 255});
                     }
                     else if (currentPlayClock == 5 * 10) {
-                        rumble(new long[]{0, 200, 200, 200}, new int[]{0,255, 0, 255});
+                        rumble(new long[]{0, 100, 200, 100}, new int[]{0,255, 0, 255});
                     }
                     else if (currentPlayClock == 4 * 10) {
-                        rumble(new long[]{0, 200, 200, 200}, new int[]{0,255, 0, 255});
+                        rumble(new long[]{0, 100, 200, 100}, new int[]{0,255, 0, 255});
                     }
                     else if (currentPlayClock == 3 * 10) {
-                        rumble(new long[]{0, 200, 200, 200}, new int[]{0,255, 0, 255});
+                        rumble(new long[]{0, 100, 200, 100}, new int[]{0,255, 0, 255});
                     }
                     else if (currentPlayClock == 2 * 10) {
-                        rumble(new long[]{0, 200, 200, 200}, new int[]{0,255, 0, 255});
+                        rumble(new long[]{0, 100, 200, 100}, new int[]{0,255, 0, 255});
                     }
                     else if (currentPlayClock == 1 * 10) {
-                        rumble(new long[]{0, 200, 200, 200}, new int[]{0,255, 0, 255});
+                        rumble(new long[]{0, 100, 200, 100}, new int[]{0,255, 0, 255});
                     }
                     else if (currentPlayClock == 0) {
                         rumble(new long[]{0, 400, 200, 400, 200, 400}, new int[]{0,255, 0, 255, 0, 255});
